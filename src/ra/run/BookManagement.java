@@ -62,8 +62,10 @@ public class BookManagement {
                 2.false""");
                 boolean status = Integer.parseInt(Config.scanner().nextLine()) == 1 ;
                 book.setBookStatus(status);
+                return;
             }
         });
+        System.out.println("Không tìm thấy sách có id "+ bookId);
     }
 
     private static void handleSearch() {
