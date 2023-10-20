@@ -110,8 +110,8 @@ public class Book implements IBook {
                 ", bookName='" + bookName + '\'' +
                 ", title='" + title + '\'' +
                 ", numberOfPages=" + numberOfPages +
-                ", importPrice=" + importPrice +
-                ", exportPrice=" + exportPrice +
+                ", importPrice=" + Config.formatter.format(importPrice) +
+                ", exportPrice=" + Config.formatter.format(exportPrice) +
                 ", interest=" + interest +
                 ", bookStatus=" + bookStatus +
                 '}');

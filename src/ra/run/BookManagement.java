@@ -56,12 +56,8 @@ public class BookManagement {
         int bookId = Integer.parseInt(Config.scanner().nextLine());
         books.forEach(book ->{
             if (book.getBookId() == bookId) {
-                System.out.println("""
-                Trạng thái
-                1.true
-                2.false""");
-                boolean status = Integer.parseInt(Config.scanner().nextLine()) == 1 ;
-                book.setBookStatus(status);
+                book.setBookStatus(!book.getBookStatus());
+                System.out.println("Thay đổi trạng thái thành công");
                 return;
             }
         });
