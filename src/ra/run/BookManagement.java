@@ -4,6 +4,7 @@ import ra.bussinessImp.Book;
 import ra.config.Config;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BookManagement {
@@ -98,7 +99,8 @@ public class BookManagement {
     }
 
     private static void handleSort() {
-        books.sort((b1,b2) -> Float.compare(b2.getInterest(), b1.getInterest()));
+        Collections.sort(books);
+        System.out.println("Xắp xếp thành công");
     }
 
     private static void handleShow() {

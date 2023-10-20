@@ -3,7 +3,7 @@ package ra.bussinessImp;
 import ra.bussiness.IBook;
 import ra.config.Config;
 
-public class Book implements IBook {
+public class Book implements IBook, Comparable<Book>{
     private static int count = 1;
     private int bookId;
     private String bookName;
@@ -115,5 +115,10 @@ public class Book implements IBook {
                 ", interest=" + Config.formatter.format(interest) + "đ" +
                 ", bookStatus=" + bookStatus +
                 '}');
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return (int) -(this.getInterest() - o.getInterest());
     }
 }
